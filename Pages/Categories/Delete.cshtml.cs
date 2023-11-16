@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Cucolas_Anamaria_Lab2.Data;
 using Cucolas_Anamaria_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cucolas_Anamaria_Lab2.Pages.Categories
 {
+
+    [Authorize(Roles = "Admin")]
+
     public class DeleteModel : PageModel
     {
         private readonly Cucolas_Anamaria_Lab2.Data.Cucolas_Anamaria_Lab2Context _context;

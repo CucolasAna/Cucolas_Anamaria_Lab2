@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Cucolas_Anamaria_Lab2.Data;
 using Cucolas_Anamaria_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cucolas_Anamaria_Lab2.Pages.Publishers
 {
+
+    [Authorize(Roles = "Admin")]
+
     public class CreateModel : PageModel
     {
         private readonly Cucolas_Anamaria_Lab2.Data.Cucolas_Anamaria_Lab2Context _context;
